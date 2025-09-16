@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Literacy Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img src="image" alt="Quiz Logo" class="logo">
+        <div class="middlemost">
+            <h2>Computer Literacy Day</h2>
+        </div>
+        <div class="top-right">
+            <div id="topic-buttons" style="display:none;">
+                <button class="topic-btn" data-topic="Basic Computers">Basic Computers</button>
+                <button class="topic-btn" data-topic="C Programming">C Programming</button>
+                <button class="topic-btn" data-topic="Python">Python</button>
+            </div>
+            <div id="time">Time Left:00:30:00</div>
+        </div>
+    </div>
+
+    <!-- Name Input -->
+    <div id="name-container" class="box">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="participant-name" placeholder="Your Name">
+        <button id="start-quiz">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container" class="box" style="display:none;">
+        <h2 id="question"></h2>
+        <ul id="options"></ul>
+        <div class="nav-buttons">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+            <button id="finish" style="display:none;">Finish</button>
+        </div>
+    </div>
+
+    <!-- Result Container -->
+    <div id="result-container" class="box" style="display:none;">
+        <h2>Quiz Finished!</h2>
+        <p>Participant: <span id="participant-display"></span></p>
+        <p>Your Score: <span id="score-display"></span></p>
+        <h3>All Answers:</h3>
+        <ul id="correct-answers-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
