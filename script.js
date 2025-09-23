@@ -1,49 +1,57 @@
+// ==========================
+// Quiz Data
+// ==========================
 const allTopics = {
   "Basic Computers": [
-    { question: "What does CPU stand for?", options: ["A:  Central Processing Unit", "B:  Computer Personal Unit", "C:  Central Process Utility", "D:Control Processing Unit"], answer: "Central Processing Unit" },
-    { question: "Which device is used for permanent data storage?", options: ["A: RAM", "B:  ROM", "C:  Hard Disk", "D:  Cache"], answer: "Hard Disk" },
-    { question: "Which of the following is an input device?", options: ["A:  Monitor", "B:  Keyboard", "C:  Printer", "D:  Speaker"], answer: "Keyboard" },
-    { question: "What does RAM stand for?", options: ["Read Access Memory", "Random Access Memory", "Run All Memory", "Rapid Access Memory"], answer: "Random Access Memory" },
-    { question: "Which one is an example of system software?", options: ["MS Word", "Windows OS", "Photoshop", "PowerPoint"], answer: "Windows OS" },
-    { question: "Which memory is volatile?", options: ["ROM", "Hard Disk", "RAM", "DVD"], answer: "RAM" },
-    { question: "What is the full form of URL?", options: ["Uniform Resource Locator", "Uniform Routing Link", "Universal Resource Link", "Uniform Reference Locator"], answer: "Uniform Resource Locator" },
-    { question: "Which protocol is used for browsing the web?", options: ["FTP", "HTTP", "SMTP", "SNMP"], answer: "HTTP" },
-    { question: "Which device displays output on screen?", options: ["Mouse", "Monitor", "Scanner", "Keyboard"], answer: "Monitor" },
-    { question: "Which number system do computers use?", options: ["Decimal", "Octal", "Binary", "Hexadecimal"], answer: "Binary" }
+    { question: "Which part of the computer performs calculations and logic operations?", options: ["CPU", "RAM", "ROM", "Hard Disk"], answer: "CPU" },
+    { question: "What does BIOS stand for?", options: ["Basic Integrated Operating System", "Basic Input Output System", "Binary Input Output Setup", "Basic Internal Output Service"], answer: "Basic Input Output System" },
+    { question: "Which storage device is fastest?", options: ["Hard Disk Drive", "Solid State Drive", "CD-ROM", "Magnetic Tape"], answer: "Solid State Drive" },
+    { question: "Which key is used to refresh a webpage in Windows?", options: ["F2", "F5", "Ctrl + R", "Esc"], answer: "F5" },
+    { question: "Which company developed the Windows operating system?", options: ["Apple", "Microsoft", "IBM", "Google"], answer: "Microsoft" },
+    { question: "What is the full form of IP?", options: ["Internet Protocol", "Internal Processing", "Input Process", "Information Path"], answer: "Internet Protocol" },
+    { question: "Which of these is an open-source operating system?", options: ["Windows", "Linux", "MacOS", "Solaris"], answer: "Linux" },
+    { question: "Which device connects a computer to the internet?", options: ["Router", "Monitor", "Keyboard", "Scanner"], answer: "Router" },
+    { question: "Which file extension is used for Microsoft Excel?", options: [".docx", ".xlsx", ".pptx", ".pdf"], answer: ".xlsx" },
+    { question: "What is the brain of the computer?", options: ["Motherboard", "Processor", "RAM", "Hard Disk"], answer: "Processor" }
   ],
+
   "C Programming": [
-    { question: 'Who is considered the "father of the C language"?', options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Guido van Rossum"], answer: "Dennis Ritchie" },
-    { question: "In which year was the C language developed?", options: ["1970", "1972", "1976", "1980"], answer: "1972" },
-    { question: "Which is a correct way to declare an integer variable named count?", options: ["int count;", "count int;", "integer count;", "declare count as int;"], answer: "int count;" },
-    { question: "Which symbol is used to denote a pre-processor statement in C?", options: ["!", "#", "~", ";"], answer: "#" },
-    { question: "Which is the correct function to print output in C?", options: ["scan()", "print()", "printf()", "display()"], answer: "printf()" },
-    { question: "Which operator is used for equality comparison in C?", options: ["=", "==", "!=", "==="], answer: "==" },
-    { question: "What is the purpose of main() in a C program?", options: ["Define global variables", "Entry point of program execution", "File input/output", "Defines custom functions"], answer: "Entry point of program execution" },
-    { question: "Which is correct way to initialize array numbers with 1,2,3?", options: ["int numbers[] = {1,2,3};", "int numbers[3] = (1,2,3);", "int numbers = {1,2,3};", "array numbers = [1,2,3];"], answer: "int numbers[] = {1,2,3};" },
-    { question: "What does sizeof operator return?", options: ["Value of variable", "Memory address", "Size in bytes", "Number of elements"], answer: "Size in bytes" },
-    { question: "Which data type is used to store a single character?", options: ["int", "float", "char", "double"], answer: "char" }
+    { question: "Which header file is needed for printf() function?", options: ["<stdio.h>", "<conio.h>", "<stdlib.h>", "<string.h>"], answer: "<stdio.h>" },
+    { question: "Which loop executes at least once?", options: ["for loop", "while loop", "do-while loop", "nested loop"], answer: "do-while loop" },
+    { question: "Which operator is used to access value at a pointer?", options: ["*", "&", "->", "%"], answer: "*" },
+    { question: "Which keyword is used to stop a loop?", options: ["exit", "stop", "break", "end"], answer: "break" },
+    { question: "What is the default return type of a function in C?", options: ["float", "int", "void", "char"], answer: "int" },
+    { question: "Which function is used to get a character input in C?", options: ["scanf()", "getch()", "getchar()", "cin"], answer: "getchar()" },
+    { question: "Which storage class makes a variable accessible only within the same file?", options: ["auto", "static", "extern", "register"], answer: "static" },
+    { question: "What is the size of int in most 32-bit systems?", options: ["2 bytes", "4 bytes", "8 bytes", "1 byte"], answer: "4 bytes" },
+    { question: "Which function is used to allocate memory dynamically in C?", options: ["malloc()", "calloc()", "realloc()", "All of these"], answer: "All of these" },
+    { question: "What does the symbol '&&' mean in C?", options: ["OR", "NOT", "AND", "Bitwise AND"], answer: "AND" }
   ],
+
   "Python": [
-    { question: "Who created Python?", options: ["James Gosling", "Dennis Ritchie", "Guido van Rossum", "Bjarne Stroustrup"], answer: "Guido van Rossum" },
-    { question: "In which year was Python first released?", options: ["1989", "1991", "1995", "2000"], answer: "1991" },
-    { question: "Which keyword is used to define a function in Python?", options: ["def", "func", "function", "define"], answer: "def" },
-    { question: "Which of these is a Python data type?", options: ["list", "tuple", "set", "All of these"], answer: "All of these" },
-    { question: "What is the output of print(2**3)?", options: ["6", "8", "9", "16"], answer: "8" },
-    { question: "Which symbol is used for comments in Python?", options: ["//", "#", "/* */", "<!-- -->"], answer: "#" },
-    { question: "Which library is used for data analysis in Python?", options: ["NumPy", "Pandas", "Matplotlib", "All of these"], answer: "All of these" },
-    { question: "Which function is used to get user input?", options: ["scan()", "input()", "read()", "get()"], answer: "input()" },
-    { question: "Which is the correct extension of Python file?", options: [".python", ".pt", ".py", ".p"], answer: ".py" },
-    { question: "What is Python mainly used for?", options: ["Web development", "AI & ML", "Data Science", "All of these"], answer: "All of these" }
+    { question: "Which keyword is used to create a class in Python?", options: ["def", "function", "class", "struct"], answer: "class" },
+    { question: "Which collection type is immutable?", options: ["list", "tuple", "set", "dictionary"], answer: "tuple" },
+    { question: "What is the output of len('OpenAI')?", options: ["4", "5", "6", "7"], answer: "6" },
+    { question: "Which keyword is used for exception handling?", options: ["catch", "try", "throw", "except"], answer: "try" },
+    { question: "Which module is used for mathematical operations in Python?", options: ["math", "os", "sys", "re"], answer: "math" },
+    { question: "Which keyword is used to create a generator in Python?", options: ["yield", "return", "generate", "next"], answer: "yield" },
+    { question: "What is the output of type(3.0)?", options: ["int", "float", "double", "number"], answer: "float" },
+    { question: "Which built-in function is used to find maximum value?", options: ["largest()", "max()", "maximum()", "biggest()"], answer: "max()" },
+    { question: "Which library is used for data visualization?", options: ["NumPy", "Pandas", "Matplotlib", "TensorFlow"], answer: "Matplotlib" },
+    { question: "Which statement is true about Python?", options: ["It is statically typed", "It uses indentation to define blocks", "It does not support OOP", "It is only for AI"], answer: "It uses indentation to define blocks" }
   ]
 };
 
-// Global variables
+
+// ==========================
+// State Variables
+// ==========================
 let participantName = "";
 let currentTopic = "Basic Computers";
 let currentQuestionIndex = 0;
 let currentQuestions = [];
 let score = 0;
-let totalTime = 1000;  // in seconds
+let totalTime = 30 * 60; // 30 minutes in seconds
 let timerInterval;
 let currentQuestionGlobalIndex = 0;
 
@@ -53,7 +61,9 @@ let allUserAnswers = {
   "Python": Array(10).fill(null)
 };
 
+// ==========================
 // DOM Elements
+// ==========================
 const nameContainer = document.getElementById("name-container");
 const quizContainer = document.getElementById("quiz-container");
 const resultContainer = document.getElementById("result-container");
@@ -65,7 +75,9 @@ const participantDisplay = document.getElementById("participant-display");
 const correctAnswersList = document.getElementById("correct-answers-list");
 const finishBtn = document.getElementById("finish");
 
+// ==========================
 // Start Quiz
+// ==========================
 document.getElementById("start-quiz").addEventListener("click", () => {
   const nameInput = document.getElementById("participant-name").value.trim();
   if (nameInput === "") {
@@ -73,14 +85,19 @@ document.getElementById("start-quiz").addEventListener("click", () => {
     return;
   }
   participantName = nameInput;
+
+  // Hide name input, show quiz
   nameContainer.style.display = "none";
   quizContainer.style.display = "block";
-  document.getElementById("topic-buttons").style.display = "block";
+  document.getElementById("topic-buttons").style.display = "flex";
+
   startTimer();
   switchTopic("Basic Computers");
 });
 
-// Timer
+// ==========================
+// Timer Functions
+// ==========================
 function startTimer() {
   updateTimeDisplay(totalTime);
   timerInterval = setInterval(() => {
@@ -98,29 +115,42 @@ function updateTimeDisplay(seconds) {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const remainingSeconds = seconds % 60;
-  timeEl.innerText = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+  timeEl.innerText = `⏳ ${hours.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
 }
 
-// Switch topic
+// ==========================
+// Topic Switching
+// ==========================
 function switchTopic(topic) {
   currentTopic = topic;
   currentQuestions = [...allTopics[topic]];
-  shuffleArray(currentQuestions);
   currentQuestionIndex = 0;
-  let prevTopics = Object.keys(allTopics).slice(0, Object.keys(allTopics).indexOf(topic));
-  currentQuestionGlobalIndex = prevTopics.reduce((acc, t) => acc + allTopics[t].length, 0);
+
+  // Calculate global index
+  let prevTopics = Object.keys(allTopics).slice(
+    0,
+    Object.keys(allTopics).indexOf(topic)
+  );
+  currentQuestionGlobalIndex = prevTopics.reduce(
+    (acc, t) => acc + allTopics[t].length,
+    0
+  );
+
   loadQuestion();
 }
 
-// Topic buttons
-document.querySelectorAll(".topic-btn").forEach(button => {
+document.querySelectorAll(".topic-btn").forEach((button) => {
   button.addEventListener("click", () => {
     const topic = button.getAttribute("data-topic");
     switchTopic(topic);
   });
 });
 
+// ==========================
 // Navigation
+// ==========================
 document.getElementById("next").addEventListener("click", () => {
   if (currentQuestionIndex < currentQuestions.length - 1) {
     currentQuestionIndex++;
@@ -139,7 +169,9 @@ document.getElementById("prev").addEventListener("click", () => {
 
 finishBtn.addEventListener("click", showResult);
 
+// ==========================
 // Show Results
+// ==========================
 function showResult() {
   clearInterval(timerInterval);
   quizContainer.style.display = "none";
@@ -149,7 +181,7 @@ function showResult() {
   correctAnswersList.innerHTML = "";
 
   let globalIndex = 0;
-  Object.keys(allTopics).forEach(topic => {
+  Object.keys(allTopics).forEach((topic) => {
     const topicQuestions = allTopics[topic];
     const userAnswers = allUserAnswers[topic];
 
@@ -160,9 +192,15 @@ function showResult() {
     topicQuestions.forEach((q, idx) => {
       const li = document.createElement("li");
       const userAnswer = userAnswers[idx] || "No Answer";
-      li.innerHTML = `<span class="question-text">${globalIndex + 1}. ${q.question}</span><br>
-                      Correct Answer: <span class="correct-answer">${q.answer}</span><br>
-                      Your Answer: <span class="${userAnswer === q.answer ? 'correct-answer' : 'wrong-answer'}">${userAnswer}</span>`;
+      li.innerHTML = `<span class="question-text">${globalIndex + 1}. ${
+        q.question
+      }</span><br>
+                      ✅ Correct: <span class="correct-answer">${q.answer}</span><br>
+                      ✏ Your Answer: <span class="${
+                        userAnswer === q.answer
+                          ? "correct-answer"
+                          : "wrong-answer"
+                      }">${userAnswer}</span>`;
       if (userAnswer === q.answer) score++;
       correctAnswersList.appendChild(li);
       globalIndex++;
@@ -173,70 +211,43 @@ function showResult() {
   scoreDisplay.innerText = `${score} / 30`;
 }
 
-// Shuffle helper
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
-
+// ==========================
 // Load Question
+// ==========================
 function loadQuestion() {
   const currentQuestion = currentQuestions[currentQuestionIndex];
-  questionEl.innerHTML = `<span class="question-text">${currentQuestionGlobalIndex + 1}. ${currentQuestion.question}</span>`;
+  questionEl.innerHTML = `<span class="question-text">${
+    currentQuestionGlobalIndex + 1
+  }. ${currentQuestion.question}</span>`;
   optionsEl.innerHTML = "";
 
   const options = currentQuestion.options;
-  const letters = ['A', 'B', 'C', 'D'];
+  const letters = ["A", "B", "C", "D"];
 
-  // Create table for options
-  const table = document.createElement('table');
-  const row1 = document.createElement('tr');
-  const row2 = document.createElement('tr');
+  options.forEach((opt, i) => {
+    const li = document.createElement("li");
+    li.innerText = `${letters[i]}. ${opt}`;
 
-  for (let i = 0; i < 2; i++) {
-    const td = document.createElement('td');
-    const li = document.createElement('li');
-    li.innerText = `${letters[i]}. ${options[i]}`;
-
-    if (allUserAnswers[currentTopic][currentQuestionIndex] === options[i]) {
+    // If already answered
+    if (allUserAnswers[currentTopic][currentQuestionIndex] === opt) {
       li.classList.add("selected");
     }
 
     li.addEventListener("click", () => {
-      document.querySelectorAll("#options li").forEach(el => el.classList.remove("selected"));
+      // Clear other selections
+      document
+        .querySelectorAll("#options li")
+        .forEach((el) => el.classList.remove("selected"));
       li.classList.add("selected");
-      allUserAnswers[currentTopic][currentQuestionIndex] = options[i];
+
+      // Save user answer
+      allUserAnswers[currentTopic][currentQuestionIndex] = opt;
     });
 
-    td.appendChild(li);
-    row1.appendChild(td);
-  }
+    optionsEl.appendChild(li);
+  });
 
-  for (let i = 2; i < 4; i++) {
-    const td = document.createElement('td');
-    const li = document.createElement('li');
-    li.innerText = `${letters[i]}. ${options[i]}`;
-
-    if (allUserAnswers[currentTopic][currentQuestionIndex] === options[i]) {
-      li.classList.add("selected");
-    }
-
-    li.addEventListener("click", () => {
-      document.querySelectorAll("#options li").forEach(el => el.classList.remove("selected"));
-      li.classList.add("selected");
-      allUserAnswers[currentTopic][currentQuestionIndex] = options[i];
-    });
-
-    td.appendChild(li);
-    row2.appendChild(td);
-  }
-
-  table.appendChild(row1);
-  table.appendChild(row2);
-  optionsEl.appendChild(table);
-
-  finishBtn.style.display = (currentQuestionGlobalIndex === 29) ? "inline-block" : "none";
+  // Show finish button only at last question
+  finishBtn.style.display =
+    currentQuestionGlobalIndex === 29 ? "inline-block" : "none";
 }
-
