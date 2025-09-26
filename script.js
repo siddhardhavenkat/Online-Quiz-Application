@@ -2,45 +2,44 @@
 // Quiz Data
 // ==========================
 const allTopics = {
-  "Basic Computers": [
-    { question: "Which part of the computer performs calculations and logic operations?", options: ["CPU", "RAM", "ROM", "Hard Disk"], answer: "CPU" },
-    { question: "What does BIOS stand for?", options: ["Basic Integrated Operating System", "Basic Input Output System", "Binary Input Output Setup", "Basic Internal Output Service"], answer: "Basic Input Output System" },
-    { question: "Which storage device is fastest?", options: ["Hard Disk Drive", "Solid State Drive", "CD-ROM", "Magnetic Tape"], answer: "Solid State Drive" },
-    { question: "Which key is used to refresh a webpage in Windows?", options: ["F2", "F5", "Ctrl + R", "Esc"], answer: "F5" },
-    { question: "Which company developed the Windows operating system?", options: ["Apple", "Microsoft", "IBM", "Google"], answer: "Microsoft" },
-    { question: "What is the full form of IP?", options: ["Internet Protocol", "Internal Processing", "Input Process", "Information Path"], answer: "Internet Protocol" },
-    { question: "Which of these is an open-source operating system?", options: ["Windows", "Linux", "MacOS", "Solaris"], answer: "Linux" },
-    { question: "Which device connects a computer to the internet?", options: ["Router", "Monitor", "Keyboard", "Scanner"], answer: "Router" },
-    { question: "Which file extension is used for Microsoft Excel?", options: [".docx", ".xlsx", ".pptx", ".pdf"], answer: ".xlsx" },
-    { question: "What is the brain of the computer?", options: ["Motherboard", "Processor", "RAM", "Hard Disk"], answer: "Processor" }
+  "SQL": [
+    { question: "Which SQL command is used to retrieve data from a database?", options: ["GET", "SELECT", "EXTRACT", "FETCH"], answer: "SELECT" },
+    { question: "Which clause is used to filter rows in SQL?", options: ["WHERE", "HAVING", "GROUP BY", "ORDER BY"], answer: "WHERE" },
+    { question: "What does the PRIMARY KEY constraint do?", options: ["Allows NULL values", "Ensures uniqueness", "Creates index only", "Stores duplicate rows"], answer: "Ensures uniqueness" },
+    { question: "Which SQL function returns the number of rows?", options: ["COUNT()", "SUM()", "LENGTH()", "ROWNUM()"], answer: "COUNT()" },
+    { question: "Which operator is used for pattern matching in SQL?", options: ["BETWEEN", "LIKE", "IN", "EXISTS"], answer: "LIKE" },
+    { question: "What is the default sorting order of ORDER BY?", options: ["Descending", "Ascending", "Random", "Depends on index"], answer: "Ascending" },
+    { question: "Which SQL statement is used to remove a table?", options: ["DELETE TABLE", "DROP TABLE", "REMOVE TABLE", "TRUNCATE TABLE"], answer: "DROP TABLE" },
+    { question: "What is a foreign key in SQL?", options: ["Unique identifier", "Link between tables", "Temporary column", "Auto increment column"], answer: "Link between tables" },
+    { question: "Which SQL clause groups rows based on a column?", options: ["ORDER BY", "GROUP BY", "PARTITION BY", "JOIN"], answer: "GROUP BY" },
+    { question: "Which command is used to update existing records?", options: ["CHANGE", "UPDATE", "MODIFY", "ALTER"], answer: "UPDATE" }
   ],
-
-  "C Programming": [
-    { question: "Which header file is needed for printf() function?", options: ["<stdio.h>", "<conio.h>", "<stdlib.h>", "<string.h>"], answer: "<stdio.h>" },
-    { question: "Which loop executes at least once?", options: ["for loop", "while loop", "do-while loop", "nested loop"], answer: "do-while loop" },
-    { question: "Which operator is used to access value at a pointer?", options: ["*", "&", "->", "%"], answer: "*" },
-    { question: "Which keyword is used to stop a loop?", options: ["exit", "stop", "break", "end"], answer: "break" },
-    { question: "What is the default return type of a function in C?", options: ["float", "int", "void", "char"], answer: "int" },
-    { question: "Which function is used to get a character input in C?", options: ["scanf()", "getch()", "getchar()", "cin"], answer: "getchar()" },
-    { question: "Which storage class makes a variable accessible only within the same file?", options: ["auto", "static", "extern", "register"], answer: "static" },
-    { question: "What is the size of int in most 32-bit systems?", options: ["2 bytes", "4 bytes", "8 bytes", "1 byte"], answer: "4 bytes" },
-    { question: "Which function is used to allocate memory dynamically in C?", options: ["malloc()", "calloc()", "realloc()", "All of these"], answer: "All of these" },
-    { question: "What does the symbol '&&' mean in C?", options: ["OR", "NOT", "AND", "Bitwise AND"], answer: "AND" }
-  ],
-
   "Python": [
-    { question: "Which keyword is used to create a class in Python?", options: ["def", "function", "class", "struct"], answer: "class" },
-    { question: "Which collection type is immutable?", options: ["list", "tuple", "set", "dictionary"], answer: "tuple" },
-    { question: "What is the output of len('OpenAI')?", options: ["4", "5", "6", "7"], answer: "6" },
-    { question: "Which keyword is used for exception handling?", options: ["catch", "try", "throw", "except"], answer: "try" },
-    { question: "Which module is used for mathematical operations in Python?", options: ["math", "os", "sys", "re"], answer: "math" },
-    { question: "Which keyword is used to create a generator in Python?", options: ["yield", "return", "generate", "next"], answer: "yield" },
-    { question: "What is the output of type(3.0)?", options: ["int", "float", "double", "number"], answer: "float" },
-    { question: "Which built-in function is used to find maximum value?", options: ["largest()", "max()", "maximum()", "biggest()"], answer: "max()" },
-    { question: "Which library is used for data visualization?", options: ["NumPy", "Pandas", "Matplotlib", "TensorFlow"], answer: "Matplotlib" },
-    { question: "Which statement is true about Python?", options: ["It is statically typed", "It uses indentation to define blocks", "It does not support OOP", "It is only for AI"], answer: "It uses indentation to define blocks" }
+    { question: "What type of programming language is Python?", options: ["Compiled", "Interpreted", "Assembly", "Machine"], answer: "Interpreted" },
+    { question: "Which of these is immutable in Python?", options: ["List", "Dictionary", "Tuple", "Set"], answer: "Tuple" },
+    { question: "What does the len() function do?", options: ["Counts only numbers", "Returns length of object", "Finds memory size", "Counts only strings"], answer: "Returns length of object" },
+    { question: "Which keyword is used to handle exceptions?", options: ["try", "except", "catch", "throw"], answer: "except" },
+    { question: "What is the output of bool('False') in Python?", options: ["False", "True", "Error", "None"], answer: "True" },
+    { question: "Which library is used for numerical computations?", options: ["NumPy", "Flask", "Django", "Tkinter"], answer: "NumPy" },
+    { question: "Which method is used to add an item to a list?", options: ["add()", "append()", "insert()", "push()"], answer: "append()" },
+    { question: "What is the default return value of a Python function without return?", options: ["0", "None", "False", "Empty string"], answer: "None" },
+    { question: "Which symbol is used for floor division in Python?", options: ["/", "//", "%", "**"], answer: "//" },
+    { question: "Which Python keyword defines an anonymous function?", options: ["def", "func", "lambda", "inline"], answer: "lambda" }
+  ],
+  "DSA": [
+    { question: "Which data structure uses FIFO principle?", options: ["Stack", "Queue", "Tree", "Graph"], answer: "Queue" },
+    { question: "What is the time complexity of binary search?", options: ["O(n)", "O(log n)", "O(n^2)", "O(1)"], answer: "O(log n)" },
+    { question: "Which traversal visits nodes in Left-Root-Right order?", options: ["Preorder", "Inorder", "Postorder", "Level order"], answer: "Inorder" },
+    { question: "Which sorting algorithm has the best average time complexity?", options: ["Bubble Sort", "Selection Sort", "Merge Sort", "Insertion Sort"], answer: "Merge Sort" },
+    { question: "Which data structure is used in recursion?", options: ["Queue", "Stack", "Array", "Graph"], answer: "Stack" },
+    { question: "What is the maximum number of nodes in a binary tree of height h?", options: ["2^h - 1", "h^2", "h * 2", "h!"], answer: "2^h - 1" },
+    { question: "Which algorithm is used for shortest path in graphs?", options: ["DFS", "BFS", "Dijkstra’s", "Kruskal’s"], answer: "Dijkstra’s" },
+    { question: "Which operation is not possible in a stack?", options: ["Push", "Pop", "Peek", "Enqueue"], answer: "Enqueue" },
+    { question: "Which data structure is best for implementing LRU cache?", options: ["Stack", "LinkedHashMap", "Queue", "HashSet"], answer: "LinkedHashMap" },
+    { question: "Which searching algorithm is best for unsorted data?", options: ["Binary Search", "Linear Search", "DFS", "BFS"], answer: "Linear Search" }
   ]
 };
+
 
 
 // ==========================
@@ -251,3 +250,4 @@ function loadQuestion() {
   finishBtn.style.display =
     currentQuestionGlobalIndex === 29 ? "inline-block" : "none";
 }
+
