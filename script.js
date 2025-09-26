@@ -251,3 +251,4 @@ function loadQuestion() {
     currentQuestionGlobalIndex === 29 ? "inline-block" : "none";
 }
 
+
