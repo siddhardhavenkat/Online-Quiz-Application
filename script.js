@@ -46,7 +46,7 @@ const allTopics = {
 // State Variables
 // ==========================
 let participantName = "";
-let currentTopic = "Basic Computers";
+let currentTopic = "SQL";
 let currentQuestionIndex = 0;
 let currentQuestions = [];
 let score = 0;
@@ -55,9 +55,9 @@ let timerInterval;
 let currentQuestionGlobalIndex = 0;
 
 let allUserAnswers = {
-  "Basic Computers": Array(10).fill(null),
-  "C Programming": Array(10).fill(null),
-  "Python": Array(10).fill(null)
+  "SQL": Array(10).fill(null),
+  "Python": Array(10).fill(null),
+  "DSA": Array(10).fill(null)
 };
 
 // ==========================
@@ -91,7 +91,7 @@ document.getElementById("start-quiz").addEventListener("click", () => {
   document.getElementById("topic-buttons").style.display = "flex";
 
   startTimer();
-  switchTopic("Basic Computers");
+  switchTopic("SQL");
 });
 
 // ==========================
@@ -250,5 +250,6 @@ function loadQuestion() {
   finishBtn.style.display =
     currentQuestionGlobalIndex === 29 ? "inline-block" : "none";
 }
+
 
 
